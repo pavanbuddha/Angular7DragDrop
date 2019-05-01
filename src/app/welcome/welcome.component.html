@@ -1,0 +1,60 @@
+<div class="example-container">
+  <h2>To do</h2>
+
+  <div
+    cdkDropList
+    #page4List="cdkDropList"
+    [cdkDropListData]="page4"
+    [cdkDropListConnectedTo]="[page3List]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+   <table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Email</th>
+    <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="example-box" *ngFor="let item of page4" cdkDrag >
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td> 
+    <td>{{item.email}}</td>
+    <td>{{item.phone}}</td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="example-container">
+  <h2>To do</h2>
+
+  <div
+    cdkDropList
+    #page3List="cdkDropList"
+    [cdkDropListData]="page3"
+    [cdkDropListConnectedTo]="[page4List]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+   <table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Email</th>
+    <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="example-box" *ngFor="let item of page3" cdkDrag >
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td> 
+    <td>{{item.email}}</td>
+    <td>{{item.phone}}</td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
